@@ -21,6 +21,6 @@ public class Main {
         }
        
         
-        System.out.printf("%.2f",result/N);
+        System.out.print(result/N);
     }
 }
