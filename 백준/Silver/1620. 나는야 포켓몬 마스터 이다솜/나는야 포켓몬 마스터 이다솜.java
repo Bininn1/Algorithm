@@ -7,18 +7,20 @@ public class Main {
         int N = in.nextInt();
         int M = in.nextInt();
         in.nextLine();
-
+        
         HashMap<String, Integer> name = new HashMap<>();
         HashMap<Integer, String> num = new HashMap<>();
-
-        for (int i = 1; i <= N; i++) {
-            String pokemonName = in.nextLine();
-            name.put(pokemonName, i);
-            num.put(i, pokemonName);
+        
+        for(int i = 1; i <= N; i++) {
+            String input = in.nextLine();
+            
+            name.put(input, i);
+            num.put(i, input);
         }
-
+        
         for (int i = 0; i < M; i++) {
             String answer = in.nextLine();
+            
             if (answer.matches("\\d+")) {
                 int number = Integer.parseInt(answer);
                 System.out.println(num.get(number));
